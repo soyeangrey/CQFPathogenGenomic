@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="urn:hl7-org:elm:r1" xmlns:t="urn:hl7-org:elm-types:r1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:fhir="http://hl7.org/fhir" xmlns:qdm43="urn:healthit-gov:qdm:v4_3" xmlns:qdm53="urn:healthit-gov:qdm:v5_3" xmlns:a="urn:hl7-org:cql-annotations:r1">
+   <annotation translatorVersion="2.7.0" translatorOptions="EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion" xsi:type="a:CqlToElmInfo"/>
+   <annotation xsi:type="a:Annotation">
+      <a:s r="6">
+         <a:s>library PlasmidDetectedConcepts version '0.1.0'</a:s>
+      </a:s>
+   </annotation>
+   <identifier id="PlasmidDetectedConcepts" system="http://fhir.org/guides/cqf/ccc" version="0.1.0"/>
+   <schemaIdentifier id="urn:hl7-org:elm" version="r1"/>
+   <usings>
+      <def localIdentifier="System" uri="urn:hl7-org:elm-types:r1"/>
+   </usings>
+   <valueSets>
+      <def localId="1" locator="3:1-3:110" name="Resistance Plasmid Mediated" id="https://fhir.openconceptlab.org/orgs/cidgoh/ValueSet/PlasmidMediated" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="1">
+               <a:s>valueset &quot;Resistance Plasmid Mediated&quot;: 'https://fhir.openconceptlab.org/orgs/cidgoh/ValueSet/PlasmidMediated'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="2" locator="4:1-4:75" name="AMR" id="https://fhir.openconceptlab.org/orgs/cidgoh/ValueSet/AMR/" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="2">
+               <a:s>valueset &quot;AMR&quot;: 'https://fhir.openconceptlab.org/orgs/cidgoh/ValueSet/AMR/'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="3" locator="5:1-5:115" name="antimicrobial resistant plasmid type" id="https://fhir.openconceptlab.org/orgs/cidgoh/ValueSet/AMRplasmid/" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="3">
+               <a:s>valueset &quot;antimicrobial resistant plasmid type&quot;: 'https://fhir.openconceptlab.org/orgs/cidgoh/ValueSet/AMRplasmid/'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="4" locator="6:1-6:88" name="bacteria" id="https://fhir.openconceptlab.org/orgs/cidgoh/ValueSet/bacteriaWGS/" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="4">
+               <a:s>valueset &quot;bacteria&quot;: 'https://fhir.openconceptlab.org/orgs/cidgoh/ValueSet/bacteriaWGS/'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="5" locator="7:1-7:111" name="Detected Resistance Marker" id="https://fhir.openconceptlab.org/orgs/cidgoh/ValueSet/ResistanceMarker/" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="5">
+               <a:s>valueset &quot;Detected Resistance Marker&quot;: 'https://fhir.openconceptlab.org/orgs/cidgoh/ValueSet/ResistanceMarker/'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="6" locator="8:1-8:136" name="phenotypic antimicrobial drug susceptibility test" id="https://fhir.openconceptlab.org/orgs/cidgoh/ValueSet/drugSusceptibility/" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="6">
+               <a:s>valueset &quot;phenotypic antimicrobial drug susceptibility test&quot;: 'https://fhir.openconceptlab.org/orgs/cidgoh/ValueSet/drugSusceptibility/'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </valueSets>
+</library>

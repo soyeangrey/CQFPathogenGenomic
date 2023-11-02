@@ -1,0 +1,29 @@
+{
+  "resourceType": "ValueSet",
+  "id": "1001",
+  "url": "https://fhir.openconceptlab.org/orgs/cidgoh/ValueSet/PlasmidMediated",
+  "identifier": [ {
+    "system": "https://api.openconceptlab.org",
+    "value": "/orgs/cidgoh/ValueSet/PlasmidMediated/"
+  } ],
+  "version": "v1.0",
+  "name": "ResistancePlasmidMediated",
+  "title": "Resistance Plasmid Mediated",
+  "status": "active",
+  "experimental": true,
+  "publisher": "CIDGOH",
+  "expansion": {
+    "identifier": "PlasmidMediated",
+    "timestamp": "2023-09-27T14:00:53.699786Z",
+    "contains": [ {
+      "system": "https://cidgoh.ca",
+      "code": "1001",
+      "display": "Resistance Plasmid Mediated"
+    }, {
+      "system": "https://genepio.org/",
+      "version": "v1.0",
+      "code": "1001",
+      "display": "PlasmidMediated"
+    } ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+    "resourceType": "ValueSet",
+    "id": "113",
+    "url": "https://fhir.openconceptlab.org/orgs/cidgoh/ValueSet/bacteriaWGS",
+    "identifier": [ {
+      "system": "https://api.openconceptlab.org",
+      "value": "/orgs/cidgoh/ValueSet/bacteriaWGS//"
+    } ],
+    "version": "v1.0",
+    "name": "bacteria identified for whole genome sequencing",
+    "title": "bacteria identified for whole genome sequencing",
+    "status": "active",
+    "experimental": true,
+    "publisher": "CIDGOH",
+    "expansion": {
+      "identifier": "bacteriaWGS",
+      "timestamp": "2023-11-02T17:05:05.254431Z",
+      "contains": [ {
+        "system": "https://cidgoh.ca",
+        "code": "724",
+        "display": "bacteriaWGS"
+      }, {
+        "system": "https://genepio.org/",
+        "version": "v1.0",
+        "code": "724",
+        "display": "bacteriaWGS"
+      } ]
+    }
+  }

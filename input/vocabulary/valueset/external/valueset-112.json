@@ -1,0 +1,29 @@
+{
+    "resourceType": "ValueSet",
+    "id": "112",
+    "url": "https://fhir.openconceptlab.org/orgs/cidgoh/ValueSet/AMRplasmid/",
+    "identifier": [ {
+      "system": "https://api.openconceptlab.org",
+      "value": "/orgs/cidgoh/ValueSet/AMRplasmid/"
+    } ],
+    "version": "v1.0",
+    "name": "antimicrobial resistant plasmid type",
+    "title": "antimicrobial resistant plasmid type",
+    "status": "active",
+    "experimental": true,
+    "publisher": "CIDGOH",
+    "expansion": {
+      "identifier": "AMRplasmid",
+      "timestamp": "2023-11-02T17:14:43.785674Z",
+      "contains": [ {
+        "system": "https://cidgoh.ca",
+        "code": "111121",
+        "display": "IncFIA"
+      }, {
+        "system": "https://genepio.org/",
+        "version": "v1.0",
+        "code": "1001",
+        "display": "antimicrobial resistant plasmid type"
+      } ]
+    }
+  }

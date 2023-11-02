@@ -1,0 +1,587 @@
+{
+   "library" : {
+      "annotation" : [ {
+         "translatorVersion" : "2.7.0",
+         "translatorOptions" : "EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion",
+         "type" : "CqlToElmInfo"
+      }, {
+         "type" : "Annotation",
+         "s" : {
+            "r" : "37",
+            "s" : [ {
+               "value" : [ "","library PlasmidDetectedElements version '0.1.0'" ]
+            } ]
+         }
+      } ],
+      "identifier" : {
+         "id" : "PlasmidDetectedElements",
+         "system" : "http://fhir.org/guides/cqf/ccc",
+         "version" : "0.1.0"
+      },
+      "schemaIdentifier" : {
+         "id" : "urn:hl7-org:elm",
+         "version" : "r1"
+      },
+      "usings" : {
+         "def" : [ {
+            "localIdentifier" : "System",
+            "uri" : "urn:hl7-org:elm-types:r1"
+         }, {
+            "localId" : "1",
+            "locator" : "3:1-3:26",
+            "localIdentifier" : "FHIR",
+            "uri" : "http://hl7.org/fhir",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "1",
+                  "s" : [ {
+                     "value" : [ "","using " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIR" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'4.0.1'" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "includes" : {
+         "def" : [ {
+            "localId" : "2",
+            "locator" : "5:1-5:35",
+            "localIdentifier" : "FHIRHelpers",
+            "path" : "http://fhir.org/guides/cqf/ccc/FHIRHelpers",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "2",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIRHelpers" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'4.0.1'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "3",
+            "locator" : "6:1-6:44",
+            "localIdentifier" : "FC",
+            "path" : "http://fhir.org/guides/cqf/ccc/FHIRCommon",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "3",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIRCommon" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'4.0.1'"," called ","FC" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "4",
+            "locator" : "8:1-8:41",
+            "localIdentifier" : "Cx",
+            "path" : "http://fhir.org/guides/cqf/ccc/PlasmidDetectedConcepts",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "4",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "PlasmidDetectedConcepts" ]
+                     } ]
+                  }, {
+                     "value" : [ " called ","Cx" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "parameters" : {
+         "def" : [ {
+            "localId" : "12",
+            "locator" : "17:1-18:41",
+            "name" : "Measurement Period",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "12",
+                  "s" : [ {
+                     "value" : [ "// QUESTION: Should this be a single timepoint, or is a period required?\n//parameter AsOf DateTime default Now()\n\n/*\nNOTE: Introduced Measurement Period as the parameter here for demonstration purposes\nso it will run on the current implementations.\n*/\n","parameter ","\"Measurement Period\""," " ]
+                  }, {
+                     "r" : "11",
+                     "s" : [ {
+                        "value" : [ "Interval<" ]
+                     }, {
+                        "r" : "10",
+                        "s" : [ {
+                           "value" : [ "DateTime" ]
+                        } ]
+                     }, {
+                        "value" : [ ">" ]
+                     } ]
+                  }, {
+                     "value" : [ "\n  default " ]
+                  }, {
+                     "r" : "9",
+                     "s" : [ {
+                        "value" : [ "Interval[" ]
+                     }, {
+                        "r" : "7",
+                        "s" : [ {
+                           "r" : "5",
+                           "s" : [ {
+                              "value" : [ "Now","()" ]
+                           } ]
+                        }, {
+                           "value" : [ " - " ]
+                        }, {
+                           "r" : "6",
+                           "s" : [ {
+                              "value" : [ "5 ","year" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ ", " ]
+                     }, {
+                        "r" : "8",
+                        "s" : [ {
+                           "value" : [ "Now","()" ]
+                        } ]
+                     }, {
+                        "value" : [ "]" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "default" : {
+               "localId" : "9",
+               "locator" : "18:11-18:41",
+               "lowClosed" : true,
+               "highClosed" : true,
+               "type" : "Interval",
+               "low" : {
+                  "localId" : "7",
+                  "locator" : "18:20-18:33",
+                  "type" : "Subtract",
+                  "operand" : [ {
+                     "localId" : "5",
+                     "locator" : "18:20-18:24",
+                     "type" : "Now"
+                  }, {
+                     "localId" : "6",
+                     "locator" : "18:28-18:33",
+                     "value" : 5,
+                     "unit" : "year",
+                     "type" : "Quantity"
+                  } ]
+               },
+               "high" : {
+                  "localId" : "8",
+                  "locator" : "18:36-18:40",
+                  "type" : "Now"
+               }
+            },
+            "parameterTypeSpecifier" : {
+               "localId" : "11",
+               "locator" : "17:32-17:49",
+               "type" : "IntervalTypeSpecifier",
+               "pointType" : {
+                  "localId" : "10",
+                  "locator" : "17:41-17:48",
+                  "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                  "type" : "NamedTypeSpecifier"
+               }
+            }
+         } ]
+      },
+      "contexts" : {
+         "def" : [ {
+            "locator" : "20:1-20:15",
+            "name" : "Patient"
+         } ]
+      },
+      "statements" : {
+         "def" : [ {
+            "locator" : "20:1-20:15",
+            "name" : "Patient",
+            "context" : "Patient",
+            "expression" : {
+               "type" : "SingletonFrom",
+               "operand" : {
+                  "locator" : "20:1-20:15",
+                  "dataType" : "{http://hl7.org/fhir}Patient",
+                  "templateId" : "http://hl7.org/fhir/StructureDefinition/Patient",
+                  "type" : "Retrieve"
+               }
+            }
+         }, {
+            "localId" : "15",
+            "locator" : "22:1-23:29",
+            "name" : "AsOf",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "15",
+                  "s" : [ {
+                     "value" : [ "","define ","AsOf",":\n  " ]
+                  }, {
+                     "r" : "14",
+                     "s" : [ {
+                        "value" : [ "end of " ]
+                     }, {
+                        "r" : "13",
+                        "s" : [ {
+                           "value" : [ "\"Measurement Period\"" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "14",
+               "locator" : "23:3-23:29",
+               "type" : "End",
+               "operand" : {
+                  "localId" : "13",
+                  "locator" : "23:10-23:29",
+                  "name" : "Measurement Period",
+                  "type" : "ParameterRef"
+               }
+            }
+         }, {
+            "localId" : "23",
+            "locator" : "26:1-28:29",
+            "name" : "Resistance Plasmid Mediated Diagnostic Reports",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "23",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Resistance Plasmid Mediated Diagnostic Reports\"",":\n  " ]
+                  }, {
+                     "r" : "22",
+                     "s" : [ {
+                        "s" : [ {
+                           "r" : "17",
+                           "s" : [ {
+                              "r" : "16",
+                              "s" : [ {
+                                 "r" : "16",
+                                 "s" : [ {
+                                    "value" : [ "[","DiagnosticReport",": " ]
+                                 }, {
+                                    "s" : [ {
+                                       "value" : [ "Cx",".","\"Resistance Plasmid Mediated\"" ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "]" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " ","DR" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "\n    " ]
+                     }, {
+                        "r" : "21",
+                        "s" : [ {
+                           "value" : [ "where " ]
+                        }, {
+                           "r" : "21",
+                           "s" : [ {
+                              "r" : "19",
+                              "s" : [ {
+                                 "r" : "18",
+                                 "s" : [ {
+                                    "value" : [ "DR" ]
+                                 } ]
+                              }, {
+                                 "value" : [ "." ]
+                              }, {
+                                 "r" : "19",
+                                 "s" : [ {
+                                    "value" : [ "status" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " ","="," " ]
+                           }, {
+                              "r" : "20",
+                              "s" : [ {
+                                 "value" : [ "'final'" ]
+                              } ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "22",
+               "locator" : "27:3-28:29",
+               "type" : "Query",
+               "source" : [ {
+                  "localId" : "17",
+                  "locator" : "27:3-27:57",
+                  "alias" : "DR",
+                  "expression" : {
+                     "localId" : "16",
+                     "locator" : "27:3-27:54",
+                     "dataType" : "{http://hl7.org/fhir}DiagnosticReport",
+                     "templateId" : "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
+                     "codeProperty" : "code",
+                     "codeComparator" : "in",
+                     "type" : "Retrieve",
+                     "codes" : {
+                        "locator" : "27:22-27:53",
+                        "name" : "Resistance Plasmid Mediated",
+                        "libraryName" : "Cx",
+                        "type" : "ValueSetRef"
+                     }
+                  }
+               } ],
+               "relationship" : [ ],
+               "where" : {
+                  "localId" : "21",
+                  "locator" : "28:5-28:29",
+                  "type" : "Equal",
+                  "operand" : [ {
+                     "name" : "ToString",
+                     "libraryName" : "FHIRHelpers",
+                     "type" : "FunctionRef",
+                     "operand" : [ {
+                        "localId" : "19",
+                        "locator" : "28:11-28:19",
+                        "path" : "status",
+                        "scope" : "DR",
+                        "type" : "Property"
+                     } ]
+                  }, {
+                     "localId" : "20",
+                     "locator" : "28:23-28:29",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "final",
+                     "type" : "Literal"
+                  } ]
+               }
+            }
+         }, {
+            "localId" : "26",
+            "locator" : "31:1-32:57",
+            "name" : "Is Flagged for Public Health",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "26",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Is Flagged for Public Health\"",":\n  " ]
+                  }, {
+                     "r" : "25",
+                     "s" : [ {
+                        "value" : [ "exists " ]
+                     }, {
+                        "r" : "24",
+                        "s" : [ {
+                           "value" : [ "\"Resistance Plasmid Mediated Diagnostic Reports\"" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "25",
+               "locator" : "32:3-32:57",
+               "type" : "Exists",
+               "operand" : {
+                  "localId" : "24",
+                  "locator" : "32:10-32:57",
+                  "name" : "Resistance Plasmid Mediated Diagnostic Reports",
+                  "type" : "ExpressionRef"
+               }
+            }
+         }, {
+            "localId" : "34",
+            "locator" : "35:1-37:26",
+            "name" : "Phenotypic susceptibility Reports",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "34",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Phenotypic susceptibility Reports\"",":\n" ]
+                  }, {
+                     "r" : "33",
+                     "s" : [ {
+                        "s" : [ {
+                           "r" : "28",
+                           "s" : [ {
+                              "r" : "27",
+                              "s" : [ {
+                                 "r" : "27",
+                                 "s" : [ {
+                                    "value" : [ "[","DiagnosticReport",": " ]
+                                 }, {
+                                    "s" : [ {
+                                       "value" : [ "Cx",".","\"phenotypic antimicrobial drug susceptibility test\"" ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "]" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " ","DDR" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "\n" ]
+                     }, {
+                        "r" : "32",
+                        "s" : [ {
+                           "value" : [ "where " ]
+                        }, {
+                           "r" : "32",
+                           "s" : [ {
+                              "r" : "30",
+                              "s" : [ {
+                                 "r" : "29",
+                                 "s" : [ {
+                                    "value" : [ "DDR" ]
+                                 } ]
+                              }, {
+                                 "value" : [ "." ]
+                              }, {
+                                 "r" : "30",
+                                 "s" : [ {
+                                    "value" : [ "status" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " ","="," " ]
+                           }, {
+                              "r" : "31",
+                              "s" : [ {
+                                 "value" : [ "'final'" ]
+                              } ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "33",
+               "locator" : "36:1-37:26",
+               "type" : "Query",
+               "source" : [ {
+                  "localId" : "28",
+                  "locator" : "36:1-36:78",
+                  "alias" : "DDR",
+                  "expression" : {
+                     "localId" : "27",
+                     "locator" : "36:1-36:74",
+                     "dataType" : "{http://hl7.org/fhir}DiagnosticReport",
+                     "templateId" : "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
+                     "codeProperty" : "code",
+                     "codeComparator" : "in",
+                     "type" : "Retrieve",
+                     "codes" : {
+                        "locator" : "36:20-36:73",
+                        "name" : "phenotypic antimicrobial drug susceptibility test",
+                        "libraryName" : "Cx",
+                        "type" : "ValueSetRef"
+                     }
+                  }
+               } ],
+               "relationship" : [ ],
+               "where" : {
+                  "localId" : "32",
+                  "locator" : "37:1-37:26",
+                  "type" : "Equal",
+                  "operand" : [ {
+                     "name" : "ToString",
+                     "libraryName" : "FHIRHelpers",
+                     "type" : "FunctionRef",
+                     "operand" : [ {
+                        "localId" : "30",
+                        "locator" : "37:7-37:16",
+                        "path" : "status",
+                        "scope" : "DDR",
+                        "type" : "Property"
+                     } ]
+                  }, {
+                     "localId" : "31",
+                     "locator" : "37:20-37:26",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "final",
+                     "type" : "Literal"
+                  } ]
+               }
+            }
+         }, {
+            "localId" : "37",
+            "locator" : "42:1-43:42",
+            "name" : "WGS triggered by antibiogram",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "37",
+                  "s" : [ {
+                     "value" : [ "","define ","\"WGS triggered by antibiogram\"",":\n" ]
+                  }, {
+                     "r" : "36",
+                     "s" : [ {
+                        "value" : [ "exists " ]
+                     }, {
+                        "r" : "35",
+                        "s" : [ {
+                           "value" : [ "\"Phenotypic susceptibility Reports\"" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "36",
+               "locator" : "43:1-43:42",
+               "type" : "Exists",
+               "operand" : {
+                  "localId" : "35",
+                  "locator" : "43:8-43:42",
+                  "name" : "Phenotypic susceptibility Reports",
+                  "type" : "ExpressionRef"
+               }
+            }
+         } ]
+      }
+   }
+}

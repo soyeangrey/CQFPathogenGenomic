@@ -1,0 +1,186 @@
+{
+  "ImplementationGuide/fhir.cqf.ccc" : {
+    "history" : false,
+    "testplan" : false,
+    "testscript" : false,
+    "index" : 0,
+    "source" : "/Users/soyeankim/cqf-ccc-1/input/cqf-ccc.xml",
+    "sourceTail" : "cqf-ccc.xml",
+    "path" : "ImplementationGuide-fhir.cqf.ccc.html",
+    "url" : "http://fhir.org/guides/cqf/ccc/ImplementationGuide/fhir.GenEpio",
+    "version" : "0.1.0",
+    "name" : "GenEpio",
+    "title" : "Clinical Pathogen Genomics CQL",
+    "experimental" : true,
+    "date" : "2023-11-02T14:59:36-07:00",
+    "description" : "An example content implementation guide that illustrates a CQL-on-FHIR approach to knowledge engineering applied to Cinical Pathogen Genomics for AMR.",
+    "jurisdictions" : [
+      {
+        "code" : "001",
+        "name" : "International",
+        "flag" : "001"
+      }
+    ],
+    "status" : {
+      "class" : "colsd",
+      "owner" : "Clinical Pathogen Genomics CQL",
+      "link" : "http://github.com/soyeankim",
+      "status" : "Draft"
+    }
+  },
+  "Library/FHIR-ModelInfo" : {
+    "history" : false,
+    "testplan" : false,
+    "testscript" : false,
+    "index" : 1,
+    "source" : "input/resources/library/FHIR-ModelInfo.json",
+    "sourceTail" : "FHIR-ModelInfo.json",
+    "path" : "Library-FHIR-ModelInfo.html",
+    "url" : "http://fhir.org/guides/cqf/ccc/Library/FHIR-ModelInfo",
+    "version" : "0.1.0",
+    "name" : "FHIR",
+    "title" : "FHIR Model Definition",
+    "experimental" : false,
+    "date" : "2021-03-12",
+    "description" : "Model definition for the FHIR R4 (v4.0.1) Model",
+    "jurisdictions" : [
+      {
+        "code" : "001",
+        "name" : "International",
+        "flag" : "001"
+      }
+    ],
+    "status" : {
+      "class" : "colsi",
+      "owner" : "Clinical Pathogen Genomics CQL",
+      "link" : "http://github.com/soyeankim",
+      "status" : "Active"
+    }
+  },
+  "Library/FHIRCommon" : {
+    "history" : false,
+    "testplan" : false,
+    "testscript" : false,
+    "index" : 2,
+    "source" : "input/resources/library/FHIRCommon.json",
+    "sourceTail" : "FHIRCommon.json",
+    "path" : "Library-FHIRCommon.html",
+    "url" : "http://fhir.org/guides/cqf/ccc/Library/FHIRCommon",
+    "version" : "0.1.0",
+    "name" : "FHIRCommon",
+    "title" : "FHIR Common",
+    "experimental" : false,
+    "date" : "2020-11-29T15:54:22-07:00",
+    "description" : "This library defines terminologies and functions commonly used in FHIR-based CQL artifacts.",
+    "jurisdictions" : [
+      {
+        "code" : "001",
+        "name" : "International",
+        "flag" : "001"
+      }
+    ],
+    "status" : {
+      "class" : "colsi",
+      "owner" : "Clinical Pathogen Genomics CQL",
+      "link" : "http://github.com/soyeankim",
+      "status" : "Active"
+    }
+  },
+  "Library/FHIRHelpers" : {
+    "history" : false,
+    "testplan" : false,
+    "testscript" : false,
+    "index" : 3,
+    "source" : "input/resources/library/FHIRHelpers.json",
+    "sourceTail" : "FHIRHelpers.json",
+    "path" : "Library-FHIRHelpers.html",
+    "url" : "http://fhir.org/guides/cqf/ccc/Library/FHIRHelpers",
+    "version" : "0.1.0",
+    "name" : "FHIRHelpers",
+    "title" : "FHIR Helpers",
+    "experimental" : false,
+    "date" : "2020-11-29T15:54:22-07:00",
+    "description" : "This library defines functions to convert between FHIR data types and CQL system-defined types, as well as functions to support FHIRPath implementation. For more information, the FHIRHelpers wiki page: https://github.com/cqframework/clinical_quality_language/wiki/FHIRHelpers",
+    "jurisdictions" : [
+      {
+        "code" : "001",
+        "name" : "International",
+        "flag" : "001"
+      }
+    ],
+    "status" : {
+      "class" : "colsi",
+      "owner" : "Clinical Pathogen Genomics CQL",
+      "link" : "http://github.com/soyeankim",
+      "status" : "Active"
+    }
+  },
+  "Library/PlasmidDetectedConcepts" : {
+    "history" : false,
+    "testplan" : false,
+    "testscript" : false,
+    "index" : 4,
+    "source" : "input/resources/library/PlasmidDetectedConcepts.json",
+    "sourceTail" : "PlasmidDetectedConcepts.json",
+    "path" : "Library-PlasmidDetectedConcepts.html",
+    "url" : "http://fhir.org/guides/cqf/ccc/Library/PlasmidDetectedConcepts",
+    "version" : "0.1.0",
+    "name" : "PlasmidDetectedConcepts",
+    "title" : "Plasmid Mobile Generic Element Concepts",
+    "date" : "2023-11-02T14:59:36-07:00",
+    "description" : "Plasmid Mobile Generic Element Concepts",
+    "jurisdictions" : [
+      {
+        "code" : "001",
+        "name" : "International",
+        "flag" : "001"
+      }
+    ],
+    "status" : {
+      "class" : "colsd",
+      "owner" : "Clinical Pathogen Genomics CQL",
+      "link" : "http://github.com/soyeankim",
+      "status" : "Draft"
+    }
+  },
+  "Library/PlasmidDetectedElements" : {
+    "history" : false,
+    "testplan" : false,
+    "testscript" : false,
+    "index" : 5,
+    "source" : "input/resources/library/PlasmidDetectedElements.json",
+    "sourceTail" : "PlasmidDetectedElements.json",
+    "path" : "Library-PlasmidDetectedElements.html",
+    "url" : "http://fhir.org/guides/cqf/ccc/Library/PlasmidDetectedElements",
+    "version" : "0.1.0",
+    "name" : "PlasmidDetectedElements",
+    "title" : "Plasmid Mobile Generic Element Concepts",
+    "date" : "2023-11-02T14:59:36-07:00",
+    "description" : "Plasmid Mobile Generic Element",
+    "jurisdictions" : [
+      {
+        "code" : "001",
+        "name" : "International",
+        "flag" : "001"
+      }
+    ],
+    "status" : {
+      "class" : "colsd",
+      "owner" : "Clinical Pathogen Genomics CQL",
+      "link" : "http://github.com/soyeankim",
+      "status" : "Draft"
+    }
+  },
+  "Device/cqf-tooling" : {
+    "history" : false,
+    "testplan" : false,
+    "testscript" : false,
+    "index" : 6,
+    "source" : "/Users/soyeankim/cqf-ccc-1/input/resources/device/cqf-tooling.json",
+    "sourceTail" : "cqf-tooling.json",
+    "path" : "Device-cqf-tooling.html",
+    "status" : {
+      "class" : "colsi"
+    }
+  }
+}

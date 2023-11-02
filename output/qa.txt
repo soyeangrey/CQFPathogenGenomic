@@ -1,0 +1,59 @@
+﻿GenEpio : Validation Results
+=========================================
+
+err = 5, warn = 0, info = 31
+IG Publisher Version: 1.5.1
+Generated Thu Nov 02 15:00:28 PDT 2023. FHIR version 4.0.1 for fhir.cqf.ccc#0.1.0 (canonical = http://fhir.org/guides/cqf/ccc)
+ Build Errors : 0 / 0 / 0
+ /Users/soyeankim/cqf-ccc-1/input/cqf-ccc : 3 / 0 / 1
+ /Users/soyeankim/cqf-ccc-1/input/resources/device/cqf-tooling : 0 / 0 / 1
+ /Users/soyeankim/cqf-ccc-1/input/resources/library/FHIR-ModelInfo : 0 / 0 / 9
+ /Users/soyeankim/cqf-ccc-1/input/resources/library/FHIRCommon : 0 / 0 / 20
+ /Users/soyeankim/cqf-ccc-1/input/resources/library/FHIRHelpers : 0 / 0 / 22
+ /Users/soyeankim/cqf-ccc-1/input/resources/library/PlasmidDetectedConcepts : 1 / 0 / 1
+ /Users/soyeankim/cqf-ccc-1/input/resources/library/PlasmidDetectedElements : 1 / 0 / 1
+</table>
+== n/a ==
+== input/cqf-ccc.xml ==
+ERROR: ImplementationGuide.where(url = 'http://fhir.org/guides/cqf/ccc/ImplementationGuide/fhir.GenEpio'): Conformance resource /Users/soyeankim/cqf-ccc-1/input/cqf-ccc.xml - the canonical URL (http://fhir.org/guides/cqf/ccc/ImplementationGuide/fhir.cqf.ccc) does not match the URL (http://fhir.org/guides/cqf/ccc/ImplementationGuide/fhir.GenEpio)
+ERROR: ImplementationGuide.url: Resource id/url mismatch: fhir.cqf.ccc/http://fhir.org/guides/cqf/ccc/ImplementationGuide/fhir.GenEpio
+ERROR: /Users/soyeankim/cqf-ccc-1/input/cqf-ccc: URL Mismatch http://fhir.org/guides/cqf/ccc/ImplementationGuide/fhir.cqf.ccc vs http://fhir.org/guides/cqf/ccc/ImplementationGuide/fhir.GenEpio
+== input/resources/device/cqf-tooling.json ==
+== input/resources/library/FHIR-ModelInfo.json ==
+INFORMATION: Library/FHIR-ModelInfo: Library.extension[3]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-shareablelibrary|1.0.0
+INFORMATION: Library/FHIR-ModelInfo: Library.extension[0].value.ofType(code): Reference to draft item http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
+INFORMATION: Library/FHIR-ModelInfo: Library.extension[1].value.ofType(code): Reference to draft item http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
+INFORMATION: Library/FHIR-ModelInfo: Library.extension[2].value.ofType(code): Reference to draft item http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-representation-level|1.0.0
+INFORMATION: Library/FHIR-ModelInfo: Library.extension[3]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-publishablelibrary|1.0.0
+== input/resources/library/FHIRCommon.json ==
+INFORMATION: Library/FHIRCommon: Library.extension[5]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-shareablelibrary|1.0.0
+INFORMATION: Library/FHIRCommon: Library.extension[0].value.ofType(code): Reference to draft item http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
+INFORMATION: Library/FHIRCommon: Library.extension[1].value.ofType(code): Reference to draft item http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
+INFORMATION: Library/FHIRCommon: Library.extension[2].value.ofType(code): Reference to draft item http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
+INFORMATION: Library/FHIRCommon: Library.extension[3].value.ofType(code): Reference to draft item http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
+INFORMATION: Library/FHIRCommon: Library.extension[4].value.ofType(code): Reference to draft item http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-representation-level|1.0.0
+INFORMATION: Library/FHIRCommon: Library.extension[5]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablelibrary|1.0.0
+INFORMATION: Library/FHIRCommon: Library.content[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablelibrary|1.0.0
+INFORMATION: Library/FHIRCommon: Library.content[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablelibrary|1.0.0
+INFORMATION: Library/FHIRCommon: Library.extension[5]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-publishablelibrary|1.0.0
+INFORMATION: Library/FHIRCommon: Library.extension[5]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablelibrary|1.0.0
+INFORMATION: Library/FHIRCommon: Library.content[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablelibrary|1.0.0
+== input/resources/library/FHIRHelpers.json ==
+INFORMATION: Library/FHIRHelpers: Library.extension[5]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-shareablelibrary|1.0.0
+INFORMATION: Library/FHIRHelpers: Library.extension[0].value.ofType(code): Reference to draft item http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
+INFORMATION: Library/FHIRHelpers: Library.extension[1].value.ofType(code): Reference to draft item http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
+INFORMATION: Library/FHIRHelpers: Library.extension[2].value.ofType(code): Reference to draft item http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
+INFORMATION: Library/FHIRHelpers: Library.extension[3].value.ofType(code): Reference to draft item http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-capability|1.0.0
+INFORMATION: Library/FHIRHelpers: Library.extension[4].value.ofType(code): Reference to draft item http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-knowledge-representation-level|1.0.0
+INFORMATION: Library/FHIRHelpers: Library.extension[5]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablelibrary|1.0.0
+INFORMATION: Library/FHIRHelpers: Library.relatedArtifact[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablelibrary|1.0.0
+INFORMATION: Library/FHIRHelpers: Library.content[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablelibrary|1.0.0
+INFORMATION: Library/FHIRHelpers: Library.content[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablelibrary|1.0.0
+INFORMATION: Library/FHIRHelpers: Library.extension[5]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-publishablelibrary|1.0.0
+INFORMATION: Library/FHIRHelpers: Library.extension[5]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablelibrary|1.0.0
+INFORMATION: Library/FHIRHelpers: Library.relatedArtifact[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablelibrary|1.0.0
+INFORMATION: Library/FHIRHelpers: Library.content[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablelibrary|1.0.0
+== input/resources/library/PlasmidDetectedConcepts.json ==
+ERROR: Library/PlasmidDetectedConcepts: Library: Library.type: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/Library|4.0.1)
+== input/resources/library/PlasmidDetectedElements.json ==
+ERROR: Library/PlasmidDetectedElements: Library: Library.type: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/Library|4.0.1)

@@ -1,0 +1,29 @@
+{
+    "resourceType": "ValueSet",
+    "id": "115",
+    "url": "https://fhir.openconceptlab.org/orgs/cidgoh/ValueSet/drugSusceptibility",
+    "identifier": [ {
+      "system": "https://api.openconceptlab.org",
+      "value": "/orgs/cidgoh/ValueSet/drugSusceptibility/"
+    } ],
+    "version": "v1.0",
+    "name": "phenotypic antimicrobial drug susceptibility test",
+    "title": "phenotypic antimicrobial drug susceptibility test",
+    "status": "active",
+    "experimental": true,
+    "publisher": "CIDGOH",
+    "expansion": {
+      "identifier": "drugSusceptibility",
+      "timestamp": "2023-11-02T17:04:48.046508Z",
+      "contains": [ {
+        "system": "http://hl7.org/fhir/v2/0203",
+        "code": "LP343406-7",
+        "display": "phenotypic antimicrobial drug susceptibility test"
+      }, {
+        "system": "https://genepio.org/",
+        "version": "v1.0",
+        "code": "115",
+        "display": "phenotypic antimicrobial drug susceptibility test"
+      } ]
+    }
+}

@@ -1,0 +1,29 @@
+{
+  "resourceType": "ValueSet",
+  "id": "222333",
+  "url": "https://fhir.openconceptlab.org/orgs/cidgoh/ValueSet/AMR",
+  "identifier": [ {
+    "system": "https://api.openconceptlab.org",
+    "value": "/orgs/cidgoh/ValueSet/AMR/"
+  } ],
+  "version": "1.0",
+  "name": "AMR",
+  "title": "Antimicrobial resistance gene",
+  "status": "active",
+  "experimental": true,
+  "publisher": "CIDGOH",
+  "expansion": {
+    "identifier": "AMR",
+    "timestamp": "2023-10-20T15:57:22.080332Z",
+    "contains": [ {
+      "system": "https://cidgoh.ca",
+      "code": "222333",
+      "display": "AMR"
+    }, {
+      "system": "https://genepio.org/",
+      "version": "1.0",
+      "code": "222333",
+      "display": "AMR"
+    } ]
+  }
+}

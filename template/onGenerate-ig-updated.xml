@@ -1,0 +1,658 @@
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+   <id value="fhir.cqf.ccc"/>
+   <text>
+      <status value="extensions"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+         <h2>GenEpio</h2>
+         <p>The official URL for this implementation guide is: </p>
+         <pre>http://fhir.org/guides/cqf/ccc/ImplementationGuide/fhir.GenEpio</pre>
+         <div>
+            <p>An example content implementation guide that illustrates a CQL-on-FHIR approach to knowledge engineering applied to Cinical Pathogen Genomics for AMR.</p>
+         </div>
+      </div>
+   </text>
+   <url value="http://fhir.org/guides/cqf/ccc/ImplementationGuide/fhir.GenEpio"/>
+   <version value="0.1.0"/>
+   <name value="GenEpio"/>
+   <title value="Clinical Pathogen Genomics CQL"/>
+   <status value="draft"/>
+   <experimental value="true"/>
+   <date value="2023-11-02T14:59:36-07:00"/>
+   <publisher value="Clinical Pathogen Genomics CQL"/>
+   <contact>
+      <telecom>
+         <system value="url"/>
+         <value value="http://github.com/soyeankim"/>
+      </telecom>
+   </contact>
+   <description value="An example content implementation guide that illustrates a CQL-on-FHIR approach to knowledge engineering applied to Cinical Pathogen Genomics for AMR."/>
+   <jurisdiction>
+      <coding>
+         <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+         <code value="001"/>
+      </coding>
+   </jurisdiction>
+   <packageId value="fhir.cqf.ccc"/>
+   <license value="CC0-1.0"/>
+   <fhirVersion value="4.0.1"/>
+   <dependsOn id="hl7tx">
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+         <valueMarkdown value="Automatically added as a dependency - all IGs depend on HL7 Terminology"/>
+      </extension>
+      <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
+      <packageId value="hl7.terminology.r4"/>
+      <version value="5.3.0"/>
+   </dependsOn>
+   <dependsOn id="hl7ext">
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+         <valueMarkdown value="Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"/>
+      </extension>
+      <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
+      <packageId value="hl7.fhir.uv.extensions.r4"/>
+      <version value="1.0.0"/>
+   </dependsOn>
+   <dependsOn id="cpg">
+      <uri value="http://hl7.org/fhir/uv/cpg/ImplementationGuide/hl7.fhir.uv.cpg"/>
+      <packageId value="hl7.fhir.uv.cpg"/>
+      <version value="1.0.0"/>
+   </dependsOn>
+   <dependsOn id="cqf">
+      <uri value="http://fhir.org/guides/cqf/common/ImplementationGuide/fhir.cqf.common"/>
+      <packageId value="fhir.cqf.common"/>
+      <version value="4.0.1"/>
+   </dependsOn>
+   <dependsOn id="measures">
+      <uri value="http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures"/>
+      <packageId value="hl7.fhir.us.cqfmeasures"/>
+      <version value="3.0.0"/>
+   </dependsOn>
+   <definition>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="copyrightyear"/>
+         </extension>
+         <extension url="value">
+            <valueString value="2019+"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="releaselabel"/>
+         </extension>
+         <extension url="value">
+            <valueString value="CI Build"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="path-liquid"/>
+         </extension>
+         <extension url="value">
+            <valueString value="templates/liquid"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="path-suppressed-warnings"/>
+         </extension>
+         <extension url="value">
+            <valueString value="input/ignoreWarnings.txt"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="autoload-resources"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="path-liquid"/>
+         </extension>
+         <extension url="value">
+            <valueString value="template/liquid"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="path-liquid"/>
+         </extension>
+         <extension url="value">
+            <valueString value="input/liquid"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="path-qa"/>
+         </extension>
+         <extension url="value">
+            <valueString value="temp/qa"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="path-temp"/>
+         </extension>
+         <extension url="value">
+            <valueString value="temp/pages"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="path-output"/>
+         </extension>
+         <extension url="value">
+            <valueString value="output"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="path-history"/>
+         </extension>
+         <extension url="value">
+            <valueString value="http://fhir.org/guides/cqf/ccc/history.html"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="template-html"/>
+         </extension>
+         <extension url="value">
+            <valueString value="template-page.html"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="template-md"/>
+         </extension>
+         <extension url="value">
+            <valueString value="template-page-md.html"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="apply-contact"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="apply-context"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="apply-copyright"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="apply-jurisdiction"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="apply-license"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="apply-publisher"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="apply-version"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="active-tables"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="fmm-definition"/>
+         </extension>
+         <extension url="value">
+            <valueString value="http://hl7.org/fhir/versions.html#maturity"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="propagate-status"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="excludelogbinaryformat"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="tabbed-snapshots"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
+         <valueCode value="hl7.fhir.uv.tools#current"/>
+      </extension>
+
+
+
+
+
+
+
+
+      <grouping id="-ka-library">
+         <name value="Knowledge Artifacts: Libraries"/>
+         <description value="These define logic, asset collections and other libraries as part of content in this implementation guide."/>
+      </grouping>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <grouping id="-other">
+         <name value="Other"/>
+         <description value="These are resources that are used within this implementation guide that do not fit into one of the other categories."/>
+      </grouping>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Device"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Device-cqf-tooling.html"/>
+         </extension>
+         <reference>
+            <reference value="Device/cqf-tooling"/>
+            <display value="CQF Tooling Device"/>
+         </reference>
+         <name value="CQFToolingDevice"/>
+         <description value="A Device that represents a CQF Tooling version."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Library"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Library-FHIR-ModelInfo.html"/>
+         </extension>
+         <reference>
+            <reference value="Library/FHIR-ModelInfo"/>
+         </reference>
+         <name value="FHIR Model Definition"/>
+         <description value="Model definition for the FHIR R4 (v4.0.1) Model"/>
+         <groupingId value="-ka-library"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Library"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Library-FHIRCommon.html"/>
+         </extension>
+         <reference>
+            <reference value="Library/FHIRCommon"/>
+         </reference>
+         <name value="FHIR Common"/>
+         <description value="This library defines terminologies and functions commonly used in FHIR-based CQL artifacts."/>
+         <groupingId value="-ka-library"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Library"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Library-FHIRHelpers.html"/>
+         </extension>
+         <reference>
+            <reference value="Library/FHIRHelpers"/>
+         </reference>
+         <name value="FHIR Helpers"/>
+         <description value="This library defines functions to convert between FHIR data types and CQL system-defined types, as well as functions to support FHIRPath implementation. For more information, the FHIRHelpers wiki page: https://github.com/cqframework/clinical_quality_language/wiki/FHIRHelpers"/>
+         <groupingId value="-ka-library"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Library"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Library-PlasmidDetectedConcepts.html"/>
+         </extension>
+         <reference>
+            <reference value="Library/PlasmidDetectedConcepts"/>
+         </reference>
+         <name value="Plasmid Mobile Generic Element Concepts"/>
+         <description value="Plasmid Mobile Generic Element Concepts"/>
+         <groupingId value="-ka-library"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Library"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Library-PlasmidDetectedElements.html"/>
+         </extension>
+         <reference>
+            <reference value="Library/PlasmidDetectedElements"/>
+         </reference>
+         <name value="Plasmid Mobile Generic Element Concepts"/>
+         <description value="Plasmid Mobile Generic Element"/>
+         <groupingId value="-ka-library"/>
+      </resource>
+      <page>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="toc.html"/>
+         </extension>
+         <nameUrl value="toc.html"/>
+         <title value="Table of Contents"/>
+         <generation value="html"/>
+         <page>
+            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+               <valueUrl value="index.html"/>
+            </extension>
+            <nameUrl value="index.html"/>
+            <title value="Clinical Pathogen Genomics"/>
+            <generation value="html"/>
+         </page>
+         <page>
+            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+               <valueUrl value="background1.html"/>
+            </extension>
+            <nameUrl value="background1.html"/>
+            <title value="Background Page 1"/>
+            <generation value="html"/>
+         </page>
+         <page>
+            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+               <valueUrl value="background2.html"/>
+            </extension>
+            <nameUrl value="background2.html"/>
+            <title value="Background Page 2"/>
+            <generation value="html"/>
+         </page>
+         <page>
+            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+               <valueUrl value="spec.html"/>
+            </extension>
+            <nameUrl value="spec.html"/>
+            <title value="Specification"/>
+            <generation value="html"/>
+         </page>
+         <page>
+            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+               <valueUrl value="downloads.html"/>
+            </extension>
+            <nameUrl value="downloads.html"/>
+            <title value="Useful Downloads"/>
+            <generation value="html"/>
+         </page>
+         <page>
+            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+               <valueUrl value="license.html"/>
+            </extension>
+            <nameUrl value="license.html"/>
+            <title value="License"/>
+            <generation value="markdown"/>
+         </page>
+         <page>
+            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+               <valueUrl value="changes.html"/>
+            </extension>
+            <nameUrl value="changes.html"/>
+            <title value="IG Change History"/>
+            <generation value="html"/>
+         </page>
+         <page>
+            <nameUrl value="artifacts.html"/>
+            <title value="Artifacts Summary"/>
+            <generation value="html"/>
+            <page>
+               <nameUrl value="Library-FHIR-ModelInfo.html"/>
+               <title value="FHIR Model Definition"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Library-FHIRCommon.html"/>
+               <title value="FHIR Common"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Library-FHIRHelpers.html"/>
+               <title value="FHIR Helpers"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Library-PlasmidDetectedConcepts.html"/>
+               <title value="Plasmid Mobile Generic Element Concepts"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Library-PlasmidDetectedElements.html"/>
+               <title value="Plasmid Mobile Generic Element Concepts"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Device-cqf-tooling.html"/>
+               <title value="CQFToolingDevice"/>
+               <generation value="generated"/>
+            </page>
+         </page>
+      </page>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/resources/library"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/resources/measure"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/resources/plandefinition"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/capabilities"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/examples"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/extensions"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/models"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/operations"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/profiles"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/resources"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/vocabulary"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/testing"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/history"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="fsh-generated/resources"/>
+      </parameter>
+      <parameter>
+         <code value="path-pages"/>
+         <value value="template/config"/>
+      </parameter>
+      <parameter>
+         <code value="path-pages"/>
+         <value value="input/images"/>
+      </parameter>
+      <parameter>
+         <code value="path-tx-cache"/>
+         <value value="input-cache/txcache"/>
+      </parameter>
+      <parameter>
+         <code value="copyrightyear"/>
+         <value value="2019+"/>
+      </parameter>
+      <parameter>
+         <code value="releaselabel"/>
+         <value value="CI Build"/>
+      </parameter>
+      <parameter>
+         <code value="path-liquid"/>
+         <value value="templates/liquid"/>
+      </parameter>
+      <parameter>
+         <code value="path-suppressed-warnings"/>
+         <value value="input/ignoreWarnings.txt"/>
+      </parameter>
+      <parameter>
+         <code value="autoload-resources"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="path-liquid"/>
+         <value value="template/liquid"/>
+      </parameter>
+      <parameter>
+         <code value="path-liquid"/>
+         <value value="input/liquid"/>
+      </parameter>
+      <parameter>
+         <code value="path-qa"/>
+         <value value="temp/qa"/>
+      </parameter>
+      <parameter>
+         <code value="path-temp"/>
+         <value value="temp/pages"/>
+      </parameter>
+      <parameter>
+         <code value="path-output"/>
+         <value value="output"/>
+      </parameter>
+      <parameter>
+         <code value="path-history"/>
+         <value value="http://fhir.org/guides/cqf/ccc/history.html"/>
+      </parameter>
+      <parameter>
+         <code value="template-html"/>
+         <value value="template-page.html"/>
+      </parameter>
+      <parameter>
+         <code value="template-md"/>
+         <value value="template-page-md.html"/>
+      </parameter>
+      <parameter>
+         <code value="apply-contact"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="apply-context"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="apply-copyright"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="apply-jurisdiction"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="apply-license"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="apply-publisher"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="apply-version"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="active-tables"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="fmm-definition"/>
+         <value value="http://hl7.org/fhir/versions.html#maturity"/>
+      </parameter>
+      <parameter>
+         <code value="propagate-status"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="excludelogbinaryformat"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="tabbed-snapshots"/>
+         <value value="true"/>
+      </parameter>
+   </definition>
+</ImplementationGuide>

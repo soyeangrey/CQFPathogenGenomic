@@ -1,0 +1,29 @@
+{
+    "resourceType": "ValueSet",
+    "id": "114",
+    "url": "https://fhir.openconceptlab.org/orgs/cidgoh/ValueSet/ResistanceMarker",
+    "identifier": [ {
+      "system": "https://api.openconceptlab.org",
+      "value": "/orgs/cidgoh/ValueSet/ResistanceMarker/"
+    } ],
+    "version": "v1.0",
+    "name": "Detected antimicrobial resistance marker",
+    "title": "Detected antimicrobial resistance marker",
+    "status": "active",
+    "experimental": true,
+    "publisher": "CIDGOH",
+    "expansion": {
+      "identifier": "ResistanceMarker",
+      "timestamp": "2023-11-02T17:14:43.785674Z",
+      "contains": [ {
+        "system": "https://cidgoh.ca",
+        "code": "3348547",
+        "display": "Beta-lactam resistance ESBL blaTEM gene [Presence] by Molecular method"
+      }, {
+        "system": "https://genepio.org/",
+        "version": "v1.0",
+        "code": "112",
+        "display": "Detected antimicrobial resistance marker"
+      } ]
+    }
+  }

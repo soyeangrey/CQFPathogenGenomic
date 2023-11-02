@@ -1,0 +1,44 @@
+[
+  {
+    "id" : "fhir.cqf.ccc",
+    "type" : "ImplementationGuide",
+    "url" : "http://fhir.org/guides/cqf/ccc/ImplementationGuide/fhir.GenEpio",
+    "version" : "0.1.0",
+    "name" : "GenEpio"
+  },
+  {
+    "id" : "FHIR-ModelInfo",
+    "type" : "Library",
+    "url" : "http://fhir.org/guides/cqf/ccc/Library/FHIR-ModelInfo",
+    "version" : "0.1.0",
+    "name" : "FHIR"
+  },
+  {
+    "id" : "FHIRCommon",
+    "type" : "Library",
+    "url" : "http://fhir.org/guides/cqf/ccc/Library/FHIRCommon",
+    "version" : "0.1.0",
+    "name" : "FHIRCommon"
+  },
+  {
+    "id" : "FHIRHelpers",
+    "type" : "Library",
+    "url" : "http://fhir.org/guides/cqf/ccc/Library/FHIRHelpers",
+    "version" : "0.1.0",
+    "name" : "FHIRHelpers"
+  },
+  {
+    "id" : "PlasmidDetectedConcepts",
+    "type" : "Library",
+    "url" : "http://fhir.org/guides/cqf/ccc/Library/PlasmidDetectedConcepts",
+    "version" : "0.1.0",
+    "name" : "PlasmidDetectedConcepts"
+  },
+  {
+    "id" : "PlasmidDetectedElements",
+    "type" : "Library",
+    "url" : "http://fhir.org/guides/cqf/ccc/Library/PlasmidDetectedElements",
+    "version" : "0.1.0",
+    "name" : "PlasmidDetectedElements"
+  }
+]

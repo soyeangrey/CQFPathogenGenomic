@@ -1,0 +1,109 @@
+Executing CQL...
+CQL path: /Users/soyeankim/cqf-ccc-1/input/cql
+Data path: /Users/soyeankim/cqf-ccc-1/input/tests/library/PlasmidDetectedElements
+Terminology path: /Users/soyeankim/cqf-ccc-1/input/vocabulary/valueset
+
+Evaluation logs:
+14:21:03.532 [pool-2-thread-1] INFO  ca.uhn.fhir.context.FhirContext - Creating new FHIR context for FHIR version [R4]
+Expected a list with at most one element, but found a list with multiple elements.
+elapsed: 0.267 seconds
+
+Executing CQL...
+CQL path: /Users/soyeankim/cqf-ccc-1/input/cql
+Data path: /Users/soyeankim/cqf-ccc-1/input/tests/library/PlasmidDetectedElements
+Terminology path: /Users/soyeankim/cqf-ccc-1/input/vocabulary/valueset
+
+Evaluation logs:
+14:22:04.261 [pool-2-thread-1] INFO  ca.uhn.fhir.context.FhirContext - Creating new FHIR context for FHIR version [R4]
+Expected a list with at most one element, but found a list with multiple elements.
+elapsed: 0.188 seconds
+
+Executing CQL...
+CQL path: /Users/soyeankim/cqf-ccc-1/input/cql
+Data path: /Users/soyeankim/cqf-ccc-1/input/tests/library/PlasmidDetectedElements
+Terminology path: /Users/soyeankim/cqf-ccc-1/input/vocabulary/valueset
+
+Evaluation logs:
+14:23:58.595 [pool-2-thread-1] INFO  ca.uhn.fhir.context.FhirContext - Creating new FHIR context for FHIR version [R4]
+Expected a list with at most one element, but found a list with multiple elements.
+elapsed: 0.198 seconds
+
+Executing CQL...
+CQL path: /Users/soyeankim/cqf-ccc-1/input/cql
+Data path: /Users/soyeankim/cqf-ccc-1/input/tests/library/PlasmidDetectedElements
+Terminology path: /Users/soyeankim/cqf-ccc-1/input/vocabulary/valueset
+
+Evaluation logs:
+14:26:41.481 [pool-2-thread-1] INFO  ca.uhn.fhir.context.FhirContext - Creating new FHIR context for FHIR version [R4]
+Expected a list with at most one element, but found a list with multiple elements.
+elapsed: 0.187 seconds
+
+Executing CQL...
+CQL path: /Users/soyeankim/cqf-ccc-1/input/cql
+Data path: /Users/soyeankim/cqf-ccc-1/input/tests/library/PlasmidDetectedElements
+Terminology path: /Users/soyeankim/cqf-ccc-1/input/vocabulary/valueset
+
+Evaluation logs:
+14:27:08.418 [pool-2-thread-1] INFO  ca.uhn.fhir.context.FhirContext - Creating new FHIR context for FHIR version [R4]
+Expected a list with at most one element, but found a list with multiple elements.
+elapsed: 0.212 seconds
+
+Executing CQL...
+CQL path: /Users/soyeankim/cqf-ccc-1/input/cql
+Data path: /Users/soyeankim/cqf-ccc-1/input/tests/library/PlasmidDetectedElements
+Terminology path: /Users/soyeankim/cqf-ccc-1/input/vocabulary/valueset
+
+Evaluation logs:
+14:28:48.487 [pool-2-thread-1] INFO  ca.uhn.fhir.context.FhirContext - Creating new FHIR context for FHIR version [R4]
+Expected a list with at most one element, but found a list with multiple elements.
+elapsed: 0.197 seconds
+
+Executing CQL...
+CQL path: /Users/soyeankim/cqf-ccc-1/input/cql
+Data path: /Users/soyeankim/cqf-ccc-1/input/tests/library/PlasmidDetectedElements
+Terminology path: /Users/soyeankim/cqf-ccc-1/input/vocabulary/valueset
+
+Executing CQL...
+CQL path: /Users/soyeankim/cqf-ccc-1/input/cql
+Data path: /Users/soyeankim/cqf-ccc-1/input/tests/library/PlasmidDetectedElements
+Terminology path: /Users/soyeankim/cqf-ccc-1/input/vocabulary/valueset
+
+Evaluation logs:
+14:32:41.209 [pool-2-thread-1] INFO  ca.uhn.fhir.util.VersionUtil - HAPI FHIR version 6.0.1 - Rev 2a70df1a11
+14:32:41.216 [pool-2-thread-1] INFO  ca.uhn.fhir.context.FhirContext - Creating new FHIR context for FHIR version [R4]
+14:32:41.518 [pool-2-thread-1] INFO  ca.uhn.fhir.util.XmlUtil - Unable to determine StAX implementation: java.xml/META-INF/MANIFEST.MF not found
+14:32:41.777 [pool-2-thread-1] INFO  c.u.f.c.support.DefaultProfileValidationSupport - Loading structure definitions from classpath: /org/hl7/fhir/r4/model/profile/profiles-resources.xml
+14:32:42.536 [pool-2-thread-1] INFO  c.u.f.c.support.DefaultProfileValidationSupport - Loading structure definitions from classpath: /org/hl7/fhir/r4/model/profile/profiles-types.xml
+14:32:42.576 [pool-2-thread-1] INFO  c.u.f.c.support.DefaultProfileValidationSupport - Loading structure definitions from classpath: /org/hl7/fhir/r4/model/profile/profiles-others.xml
+14:32:42.708 [pool-2-thread-1] INFO  c.u.f.c.support.DefaultProfileValidationSupport - Loading structure definitions from classpath: /org/hl7/fhir/r4/model/extension/extension-definitions.xml
+14:32:42.874 [pool-2-thread-1] INFO  ca.uhn.fhir.context.FhirContext - Creating new FHIR context for FHIR version [R4]
+Expected a list with at most one element, but found a list with multiple elements.
+elapsed: 7.59 seconds
+
+Executing CQL...
+CQL path: /Users/soyeankim/cqf-ccc-1/input/cql
+Data path: /Users/soyeankim/cqf-ccc-1/input/tests/library/PlasmidDetectedElements
+Terminology path: /Users/soyeankim/cqf-ccc-1/input/vocabulary/valueset
+
+Evaluation logs:
+14:33:54.216 [pool-2-thread-1] INFO  ca.uhn.fhir.context.FhirContext - Creating new FHIR context for FHIR version [R4]
+Expected a list with at most one element, but found a list with multiple elements.
+elapsed: 0.256 seconds
+
+Executing CQL...
+CQL path: /Users/soyeankim/cqf-ccc-1/input/cql
+Data path: /Users/soyeankim/cqf-ccc-1/input/tests/library/PlasmidDetectedElements
+Terminology path: /Users/soyeankim/cqf-ccc-1/input/vocabulary/valueset
+
+Evaluation logs:
+14:36:10.173 [pool-2-thread-1] INFO  ca.uhn.fhir.util.VersionUtil - HAPI FHIR version 6.0.1 - Rev 2a70df1a11
+14:36:10.179 [pool-2-thread-1] INFO  ca.uhn.fhir.context.FhirContext - Creating new FHIR context for FHIR version [R4]
+14:36:10.549 [pool-2-thread-1] INFO  ca.uhn.fhir.util.XmlUtil - Unable to determine StAX implementation: java.xml/META-INF/MANIFEST.MF not found
+14:36:10.815 [pool-2-thread-1] INFO  c.u.f.c.support.DefaultProfileValidationSupport - Loading structure definitions from classpath: /org/hl7/fhir/r4/model/profile/profiles-resources.xml
+14:36:12.020 [pool-2-thread-1] INFO  c.u.f.c.support.DefaultProfileValidationSupport - Loading structure definitions from classpath: /org/hl7/fhir/r4/model/profile/profiles-types.xml
+14:36:12.092 [pool-2-thread-1] INFO  c.u.f.c.support.DefaultProfileValidationSupport - Loading structure definitions from classpath: /org/hl7/fhir/r4/model/profile/profiles-others.xml
+14:36:12.309 [pool-2-thread-1] INFO  c.u.f.c.support.DefaultProfileValidationSupport - Loading structure definitions from classpath: /org/hl7/fhir/r4/model/extension/extension-definitions.xml
+14:36:12.601 [pool-2-thread-1] INFO  ca.uhn.fhir.context.FhirContext - Creating new FHIR context for FHIR version [R4]
+Expected a list with at most one element, but found a list with multiple elements.
+elapsed: 3.695 seconds
+

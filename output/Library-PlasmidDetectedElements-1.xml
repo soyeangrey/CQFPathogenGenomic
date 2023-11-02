@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="urn:hl7-org:elm:r1" xmlns:t="urn:hl7-org:elm-types:r1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:fhir="http://hl7.org/fhir" xmlns:qdm43="urn:healthit-gov:qdm:v4_3" xmlns:qdm53="urn:healthit-gov:qdm:v5_3" xmlns:a="urn:hl7-org:cql-annotations:r1">
+   <annotation translatorVersion="2.7.0" translatorOptions="EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion" xsi:type="a:CqlToElmInfo"/>
+   <annotation xsi:type="a:Annotation">
+      <a:s r="37">
+         <a:s>library PlasmidDetectedElements version '0.1.0'</a:s>
+      </a:s>
+   </annotation>
+   <identifier id="PlasmidDetectedElements" system="http://fhir.org/guides/cqf/ccc" version="0.1.0"/>
+   <schemaIdentifier id="urn:hl7-org:elm" version="r1"/>
+   <usings>
+      <def localIdentifier="System" uri="urn:hl7-org:elm-types:r1"/>
+      <def localId="1" locator="3:1-3:26" localIdentifier="FHIR" uri="http://hl7.org/fhir" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="1">
+               <a:s>using </a:s>
+               <a:s>
+                  <a:s>FHIR</a:s>
+               </a:s>
+               <a:s> version '4.0.1'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </usings>
+   <includes>
+      <def localId="2" locator="5:1-5:35" localIdentifier="FHIRHelpers" path="http://fhir.org/guides/cqf/ccc/FHIRHelpers" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="2">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>FHIRHelpers</a:s>
+               </a:s>
+               <a:s> version '4.0.1'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="3" locator="6:1-6:44" localIdentifier="FC" path="http://fhir.org/guides/cqf/ccc/FHIRCommon" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="3">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>FHIRCommon</a:s>
+               </a:s>
+               <a:s> version '4.0.1' called FC</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="4" locator="8:1-8:41" localIdentifier="Cx" path="http://fhir.org/guides/cqf/ccc/PlasmidDetectedConcepts">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="4">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>PlasmidDetectedConcepts</a:s>
+               </a:s>
+               <a:s> called Cx</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </includes>
+   <parameters>
+      <def localId="12" locator="17:1-18:41" name="Measurement Period" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="12">
+               <a:s>// QUESTION: Should this be a single timepoint, or is a period required?
+//parameter AsOf DateTime default Now()
+
+/*
+NOTE: Introduced Measurement Period as the parameter here for demonstration purposes
+so it will run on the current implementations.
+*/
+parameter &quot;Measurement Period&quot; </a:s>
+               <a:s r="11">
+                  <a:s>Interval&lt;</a:s>
+                  <a:s r="10">
+                     <a:s>DateTime</a:s>
+                  </a:s>
+                  <a:s>></a:s>
+               </a:s>
+               <a:s>
+  default </a:s>
+               <a:s r="9">
+                  <a:s>Interval[</a:s>
+                  <a:s r="7">
+                     <a:s r="5">
+                        <a:s>Now()</a:s>
+                     </a:s>
+                     <a:s> - </a:s>
+                     <a:s r="6">
+                        <a:s>5 year</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>, </a:s>
+                  <a:s r="8">
+                     <a:s>Now()</a:s>
+                  </a:s>
+                  <a:s>]</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <default localId="9" locator="18:11-18:41" lowClosed="true" highClosed="true" xsi:type="Interval">
+            <low localId="7" locator="18:20-18:33" xsi:type="Subtract">
+               <operand localId="5" locator="18:20-18:24" xsi:type="Now"/>
+               <operand localId="6" locator="18:28-18:33" value="5" unit="year" xsi:type="Quantity"/>
+            </low>
+            <high localId="8" locator="18:36-18:40" xsi:type="Now"/>
+         </default>
+         <parameterTypeSpecifier localId="11" locator="17:32-17:49" xsi:type="IntervalTypeSpecifier">
+            <pointType localId="10" locator="17:41-17:48" name="t:DateTime" xsi:type="NamedTypeSpecifier"/>
+         </parameterTypeSpecifier>
+      </def>
+   </parameters>
+   <contexts>
+      <def locator="20:1-20:15" name="Patient"/>
+   </contexts>
+   <statements>
+      <def locator="20:1-20:15" name="Patient" context="Patient">
+         <expression xsi:type="SingletonFrom">
+            <operand locator="20:1-20:15" dataType="fhir:Patient" templateId="http://hl7.org/fhir/StructureDefinition/Patient" xsi:type="Retrieve"/>
+         </expression>
+      </def>
+      <def localId="15" locator="22:1-23:29" name="AsOf" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="15">
+               <a:s>define AsOf:
+  </a:s>
+               <a:s r="14">
+                  <a:s>end of </a:s>
+                  <a:s r="13">
+                     <a:s>&quot;Measurement Period&quot;</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="14" locator="23:3-23:29" xsi:type="End">
+            <operand localId="13" locator="23:10-23:29" name="Measurement Period" xsi:type="ParameterRef"/>
+         </expression>
+      </def>
+      <def localId="23" locator="26:1-28:29" name="Resistance Plasmid Mediated Diagnostic Reports" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="23">
+               <a:s>define &quot;Resistance Plasmid Mediated Diagnostic Reports&quot;:
+  </a:s>
+               <a:s r="22">
+                  <a:s>
+                     <a:s r="17">
+                        <a:s r="16">
+                           <a:s r="16">
+                              <a:s>[DiagnosticReport: </a:s>
+                              <a:s>
+                                 <a:s>Cx.&quot;Resistance Plasmid Mediated&quot;</a:s>
+                              </a:s>
+                              <a:s>]</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> DR</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+    </a:s>
+                  <a:s r="21">
+                     <a:s>where </a:s>
+                     <a:s r="21">
+                        <a:s r="19">
+                           <a:s r="18">
+                              <a:s>DR</a:s>
+                           </a:s>
+                           <a:s>.</a:s>
+                           <a:s r="19">
+                              <a:s>status</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> = </a:s>
+                        <a:s r="20">
+                           <a:s>'final'</a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="22" locator="27:3-28:29" xsi:type="Query">
+            <source localId="17" locator="27:3-27:57" alias="DR">
+               <expression localId="16" locator="27:3-27:54" dataType="fhir:DiagnosticReport" templateId="http://hl7.org/fhir/StructureDefinition/DiagnosticReport" codeProperty="code" codeComparator="in" xsi:type="Retrieve">
+                  <codes locator="27:22-27:53" name="Resistance Plasmid Mediated" libraryName="Cx" xsi:type="ValueSetRef"/>
+               </expression>
+            </source>
+            <where localId="21" locator="28:5-28:29" xsi:type="Equal">
+               <operand name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                  <operand localId="19" locator="28:11-28:19" path="status" scope="DR" xsi:type="Property"/>
+               </operand>
+               <operand localId="20" locator="28:23-28:29" valueType="t:String" value="final" xsi:type="Literal"/>
+            </where>
+         </expression>
+      </def>
+      <def localId="26" locator="31:1-32:57" name="Is Flagged for Public Health" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="26">
+               <a:s>define &quot;Is Flagged for Public Health&quot;:
+  </a:s>
+               <a:s r="25">
+                  <a:s>exists </a:s>
+                  <a:s r="24">
+                     <a:s>&quot;Resistance Plasmid Mediated Diagnostic Reports&quot;</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="25" locator="32:3-32:57" xsi:type="Exists">
+            <operand localId="24" locator="32:10-32:57" name="Resistance Plasmid Mediated Diagnostic Reports" xsi:type="ExpressionRef"/>
+         </expression>
+      </def>
+      <def localId="34" locator="35:1-37:26" name="Phenotypic susceptibility Reports" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="34">
+               <a:s>define &quot;Phenotypic susceptibility Reports&quot;:
+</a:s>
+               <a:s r="33">
+                  <a:s>
+                     <a:s r="28">
+                        <a:s r="27">
+                           <a:s r="27">
+                              <a:s>[DiagnosticReport: </a:s>
+                              <a:s>
+                                 <a:s>Cx.&quot;phenotypic antimicrobial drug susceptibility test&quot;</a:s>
+                              </a:s>
+                              <a:s>]</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> DDR</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+</a:s>
+                  <a:s r="32">
+                     <a:s>where </a:s>
+                     <a:s r="32">
+                        <a:s r="30">
+                           <a:s r="29">
+                              <a:s>DDR</a:s>
+                           </a:s>
+                           <a:s>.</a:s>
+                           <a:s r="30">
+                              <a:s>status</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> = </a:s>
+                        <a:s r="31">
+                           <a:s>'final'</a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="33" locator="36:1-37:26" xsi:type="Query">
+            <source localId="28" locator="36:1-36:78" alias="DDR">
+               <expression localId="27" locator="36:1-36:74" dataType="fhir:DiagnosticReport" templateId="http://hl7.org/fhir/StructureDefinition/DiagnosticReport" codeProperty="code" codeComparator="in" xsi:type="Retrieve">
+                  <codes locator="36:20-36:73" name="phenotypic antimicrobial drug susceptibility test" libraryName="Cx" xsi:type="ValueSetRef"/>
+               </expression>
+            </source>
+            <where localId="32" locator="37:1-37:26" xsi:type="Equal">
+               <operand name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                  <operand localId="30" locator="37:7-37:16" path="status" scope="DDR" xsi:type="Property"/>
+               </operand>
+               <operand localId="31" locator="37:20-37:26" valueType="t:String" value="final" xsi:type="Literal"/>
+            </where>
+         </expression>
+      </def>
+      <def localId="37" locator="42:1-43:42" name="WGS triggered by antibiogram" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="37">
+               <a:s>define &quot;WGS triggered by antibiogram&quot;:
+</a:s>
+               <a:s r="36">
+                  <a:s>exists </a:s>
+                  <a:s r="35">
+                     <a:s>&quot;Phenotypic susceptibility Reports&quot;</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="36" locator="43:1-43:42" xsi:type="Exists">
+            <operand localId="35" locator="43:8-43:42" name="Phenotypic susceptibility Reports" xsi:type="ExpressionRef"/>
+         </expression>
+      </def>
+   </statements>
+</library>

@@ -1,0 +1,47 @@
+---
+---
+{% include fragment-pagebegin.html %}
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  {% include fragment-base-navtabs.html type='Library' id='PlasmidDetectedConcepts' active='content' %}
+  <a name="root"> </a>
+
+  <h2 id="root">Library: {{site.data.pages[page.path].title | escape_once}}
+{% if site.data.resources[resource_].experimental == true %}(Experimental){% endif %}
+  </h2>
+
+{% include fragment-resourceTable.html %}
+
+{%if site.data.resources[resource_].description %}
+<p>
+{{site.data.resources[resource_].description|markdownify}}
+</p>
+{% endif %}
+{%if site.data.resources[resource_].purpose %}
+<p>
+{{site.data.resources[resource_].purpose|markdownify}}
+</p>
+{% endif %}
+  <!-- insert intro if present -->
+  {% include fragment-intro.html type='Library' id='PlasmidDetectedConcepts' %}
+
+<!--  <p>
+  Formats: <a href="Library-PlasmidDetectedConcepts.xml.html">XML</a>, <a href="Library-PlasmidDetectedConcepts.json.html">JSON</a>, <a href="Library-PlasmidDetectedConcepts.ttl.html">Turtle</a>
+  </p>-->
+{% unless example %}
+  {% if 'Library' == 'CapabilityStatement' %}
+  <p>
+      <a href="PlasmidDetectedConcepts.openapi.json" no-download="true">Raw OpenAPI-Swagger Definition file</a> | <a href="PlasmidDetectedConcepts.openapi.json" download>Download</a>
+  </p>
+  {% endif %}
+{% endunless %}
+
+  {% include Library-PlasmidDetectedConcepts-html.xhtml %}
+
+  <!-- insert notes if present -->
+  {% include fragment-notes.html type='Library' id='PlasmidDetectedConcepts' %}
+
+  {%include Library-PlasmidDetectedConcepts-history.xhtml%}
+
+</div>
+{% include fragment-pageend.html %}
